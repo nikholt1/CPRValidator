@@ -1,10 +1,23 @@
+
+
+
+
+
 public class CPRValidator {
+
+    //TODO
+    /// lav private constructor og lav methods static, så class
+    ///  opfylder krav om utility class
+
+    private CPRValidator() {}
+
+
     //TODO
     /// isValid metode der tager String som input
     /// valider streng for længde, over 10 eller under 10.
     /// valider formated DDMMYYXXXX
     // return boolean
-    public boolean isValidLen(String str) {
+    public static boolean isValidLen(String str) {
         throw new RuntimeException("Not implemented yet");
     }
 
@@ -14,7 +27,7 @@ public class CPRValidator {
     /// må ikke ligge i fremtiden
     /// Antag følgende: Hvis YY ≤ (nuværende år % 100), så er det 2000+YY Ellers er det 1900+YY
     // return boolean
-    public boolean isValidDate(String str) {
+    public static boolean isValidDate(String str) {
         throw new RuntimeException("Not implemented yet");
     }
 
@@ -28,7 +41,7 @@ public class CPRValidator {
     /// weightedSum = 1*4 + 2*3 + 0*2 + 3*7 + 0*6 + 4*5 + 5*4 + 6*3 + 7*2 + 7*1;
     /// Tjek om modulus 11 af den vægtet sum giver 0 (i så fald et gyldigt CPR)
     /// result = weightedSum % 11; // giver 0 => gyldigt CPR
-    public boolean isValidModulus(String str) {
+    public static boolean isValidModulus(String str) {
         throw new RuntimeException("Not implemented yet");
     }
 
