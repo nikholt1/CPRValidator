@@ -19,16 +19,16 @@ class CPRValidatorTest {
 
     // isValid method tests
     @Test
-    void isValid_test_Over_10_Characters_To_Return_False() {
-        assertFalse(c.isValid("03209502191"));
+    void isValidLen_test_Over_10_Characters_To_Return_False() {
+        assertFalse(c.isValidLen("03209502191"));
     }
     @Test
-    void isValid_test_Under_10_Characters_To_return_False() {
-        assertFalse(c.isValid("032095021"));
+    void isValidLen_test_Under_10_Characters_To_return_False() {
+        assertFalse(c.isValidLen("032095021"));
     }
     @Test
-    void isValid_test_Right_On_10_to_Return_true() {
-        assertTrue(c.isValid("0320950219"));
+    void isValidLen_test_Right_On_10_to_Return_true() {
+        assertTrue(c.isValidLen("0320950219"));
     }
 
 
@@ -45,9 +45,18 @@ class CPRValidatorTest {
         assertTrue(c.isValidDate("0320950219"));
     }
 
+    @Test
+    void isValidDate_test_date_too_far_in_past_return_false() {
+        assertFalse(c.isValidDate("0320010219"));
+    }
     // TODO
     ///implement:
     //isValidModulus method tests
+
+
+
+
+}
 
 
 
