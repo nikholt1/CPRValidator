@@ -1,5 +1,4 @@
 public class CPRValidator {
-
     //TODO
     /// isValid metode der tager String som input
     /// valider streng for længde, over 10 eller under 10.
