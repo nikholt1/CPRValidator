@@ -5,7 +5,7 @@ public class CPRValidator {
     /// valider streng for længde, over 10 eller under 10.
     /// valider formated DDMMYYXXXX
     // return boolean
-    public boolean isValid(String str) {
+    public boolean isValidLen(String str) {
         throw new RuntimeException("Not implemented yet");
     }
 
@@ -33,6 +33,9 @@ public class CPRValidator {
         throw new RuntimeException("Not implemented yet");
     }
 
+
+
+}
 
 
 }
