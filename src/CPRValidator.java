@@ -18,7 +18,21 @@ public class CPRValidator {
     /// valider formated DDMMYYXXXX
     // return boolean
     public static boolean isValidLen(String str) {
-        throw new RuntimeException("Not implemented yet");
+        if (str == null) {
+            return false;
+        } else if (str.length() != 10) {
+            return false;
+        } else if (str.contains(" ")) {
+            return false;
+        } else {
+            try {
+                Integer.parseInt(str);
+                return true;
+            } catch (NumberFormatException e) {
+                return false;
+            }
+        }
+//        throw new RuntimeException("Not implemented yet");
     }
 
     //TODO
