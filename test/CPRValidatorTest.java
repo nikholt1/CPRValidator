@@ -31,10 +31,14 @@ class CPRValidatorTest {
         assertTrue(c.isValidLen("0320950219"));
     }
 
+
     @Test
     void isValidLen_test_spaces_return_false() {
         assertFalse(c.isValidLen("032001021 9"));
     }
+
+
+
 
 
     // isValidDate method tests
@@ -55,6 +59,14 @@ class CPRValidatorTest {
     // TODO
     ///implement:
     //isValidModulus method tests
+    @Test
+    void isValidModulus_test_weichted_sum_not_zero_return_false() {
+        assertFalse(c.isValidModulus("1111111111"));
+    }
+    @Test
+    void isValidModulus_test_weichted_sum_equals_zero_return_true() {
+        assertTrue(c.isValidModulus("1203045677"));
+    }
 
 
 
