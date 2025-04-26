@@ -1,7 +1,6 @@
-
-
-
-
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class CPRValidator {
 
@@ -42,7 +41,39 @@ public class CPRValidator {
     /// Antag følgende: Hvis YY ≤ (nuværende år % 100), så er det 2000+YY Ellers er det 1900+YY
     // return boolean
     public static boolean isValidDate(String str) {
-        throw new RuntimeException("Not implemented yet");
+        LocalDate dateNow = LocalDate.now();
+        String stringDate = "";
+
+        for (int i = 0; i < str.length() - 4; i++) {
+            stringDate += str.charAt(i);
+        }
+
+        try {
+
+            int day = Integer.parseInt(stringDate.substring(0, 2));
+            int month = Integer.parseInt(stringDate.substring(2, 4));
+            int year = Integer.parseInt(stringDate.substring(4, 6));
+
+            int currentYearTwoDigits = dateNow.getYear() % 100;
+
+            if (year <= currentYearTwoDigits) {
+                year += 2000;
+            } else {
+                year += 1900;
+            }
+
+            LocalDate parsedDate = LocalDate.of(year, month, day);
+
+            if (parsedDate.isAfter(dateNow)) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+
+//        throw new RuntimeException("Not implemented yet");
     }
 
     //TODO

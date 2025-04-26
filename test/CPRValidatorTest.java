@@ -65,7 +65,7 @@ class CPRValidatorTest {
 
     @Test
     void isValidDate_test_date_not_in_future_to_return_true() {
-        assertTrue(CPRValidator.isValidDate("0320950219"));
+        assertTrue(CPRValidator.isValidDate("0312950219"));
     }
 
     @Test
@@ -83,7 +83,6 @@ class CPRValidatorTest {
     void isValidModulus_test_weichted_sum_equals_zero_return_true() {
         assertTrue(CPRValidator.isValidModulus("1203045677"));
     }
-
 
 
 
