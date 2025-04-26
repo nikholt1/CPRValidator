@@ -37,6 +37,22 @@ class CPRValidatorTest {
         assertFalse(c.isValidLen("032001021 9"));
     }
 
+    @Test
+    void isValidLen_test_NullInput_return_false() {
+        assertFalse(c.isValidLen(null));
+    }
+
+    @Test
+    void isValidLen_test_EmptyString_return_false() {
+        assertFalse(c.isValidLen(""));
+    }
+
+    @Test
+    void isValidLen_test_alphabeticalInput_return_false() {
+        assertFalse(c.isValidLen("01020312A4"));
+    }
+
+
 
 
 
